@@ -398,16 +398,13 @@ import Image from "next/image";
 export default function InfoCard() {
   return (
     <div
-      data-scroll
-      data-scroll-class="is-inview"
-      data-scroll-repeat
-      className="container-fluid fade-in-section"
+      className="container-fluid"
       style={{ maxWidth: "90vw", margin: "2.5rem auto", animationDelay: "0.1s" }}
     >
       <div
         className="position-relative overflow-hidden"
         style={{
-          backgroundImage: "url('/assets/1stcard.jpg')",
+          backgroundImage: "url('/assets/act.jpg')",
           backgroundSize: "cover",
           backgroundPosition: "center",
           borderRadius: "1.5rem",
@@ -439,7 +436,7 @@ export default function InfoCard() {
                 data-scroll-repeat
                 style={{ lineHeight: "1.2", maxWidth: "470px", animationDelay: "0.2s" }}
               >
-                ACT Tutors In Dubai, For Assured <br /> For Assured <br /> High Scores
+                ACT Tutors In <br />Dubai, For Assured  <br />  High Scores
               </h1>
 
               <p
@@ -477,9 +474,9 @@ export default function InfoCard() {
                   }}
                 >
                   <div className="mb-2 icon-wrap" style={{ color: "#acf2d6" }}>
-                    <Image src="/assets/eye.png" alt="Grade Support" width={32} height={32} className="icon-img" />
+                    <Image src="/assets/medal.png" alt="Grade Support" width={32} height={32} className="icon-img" />
                   </div>
-                  Focused ACT<br />  Prep
+                  Grade 8 to 12 <br /> Support
                 </div>
 
                 <div
@@ -519,7 +516,9 @@ export default function InfoCard() {
                 // data-scroll-repeat
                 style={{ maxWidth: "600px", fontSize: "1rem", lineHeight: "1.4", opacity: "0.9" }}
               >
-                We provide comprehensive academic support through our customized IB curriculum courses, giving students access to high-end learning with experienced and certified IB tutors across various IB subjects.
+                We provide comprehensive academic support through our customized IB
+                curriculum courses, giving students access to high-end learning with
+                experienced and certified IB tutors across various IB subjects.
               </p>
 
               <div className="d-flex gap-3">
@@ -542,12 +541,17 @@ export default function InfoCard() {
 
             {/* Right Section - Form */}
             <div
-              className="col-lg-5 form-bg mt-4 mt-lg-0 d-flex align-items-center fade-in-section"
+              className="col-lg-5 form-bg mt-4 mt-lg-0 d-flex align-items-center fade-in-section position-relative"
               data-scroll
               data-scroll-class="is-inview"
               data-scroll-repeat
               style={{ animationDelay: "0.6s" }}
             >
+              {/* Rectangle background images positioned within form section */}
+              <img src="/assets/rect1.png" alt="bg-shape" className="testimonialRect rect-1" />
+              <img src="/assets/rect2.png" alt="bg-shape" className="testimonialRect rect-2" />
+              <img src="/assets/rect3.png" alt="bg-shape" className="testimonialRect rect-3" />
+
               <div
                 className="w-100 p-4 text-white form-container"
                 style={{
@@ -558,18 +562,18 @@ export default function InfoCard() {
                   backgroundSize: "cover",
                   backgroundPosition: "center",
                   backgroundRepeat: "no-repeat",
-                  margin: "0 15px" // This adds equal spacing on both sides
                 }}
               >
                 <h2
-                  className="fw-bold text-uppercase mb-4 fade-in-section"
+                  className="fw-bold text-uppercase mb-4 fade-in-section fs-5 fs-md-4"
                   data-scroll
                   data-scroll-class="is-inview"
                   data-scroll-repeat
-                  style={{ fontSize: "1.2rem", animationDelay: "0.65s" }}
+                  style={{ animationDelay: "0.65s" }}
                 >
                   GET A FREE DEMO CLASS + <br /> FREE STUDY RESOURCES
                 </h2>
+
 
                 <div className="mb-3 fade-in-section"
                   data-scroll
@@ -720,46 +724,79 @@ export default function InfoCard() {
           background: #9D9D9DB2;
           opacity: 70%;
           backdrop-filter: blur(12px);
+          position: relative;
+          z-index: 10;
         }
 
-          @media (max-width: 576px) {
-    .info-row {
-      font-size: 0.75rem !important; /* smaller text on mobile */
-    }
-    .icon-img {
-      width: 20px !important;
-      height: 20px !important; /* smaller icons on mobile */
-    }
-  }
+        /* Rectangle positioning */
+        .testimonialRect {
+          position: absolute;
+          opacity: 1;
+          pointer-events: none;
+          z-index: 2;
+        }
+
+        .rect-1 {
+          top: 3%;
+          left: 10%;
+          width: 80px;
+          height: 30px;
+        }
+
+        .rect-2 {
+          top: 5%;
+          right: 10%;
+          width: 50px;
+          height: 25px;
+        }
+
+        .rect-3 {
+          bottom: 20%;
+          right: 15%;
+          width: 55px;
+          height: 28px;
+        }
+
+        @media (max-width: 576px) {
+          .info-row {
+            font-size: 0.75rem !important; /* smaller text on mobile */
+          }
+          .icon-img {
+            width: 20px !important;
+            height: 20px !important; /* smaller icons on mobile */
+          }
+        }
 
         /* Mobile form styling - matching the image exactly */
         @media (max-width: 991.98px) {
           /* Complete mobile redesign to match image */
-       .position-relative.overflow-hidden {
-  min-height: auto !important;
-  background-image: url('/assets/1stcard.jpg') !important;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover; 
-}
-.form-bg{
- background-image: url('/assets/rectaglelinear.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-attachment: fixed;
-  }
+          .position-relative.overflow-hidden {
+            min-height: auto !important;
+            background-image: url('/assets/act.jpg') !important;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover; 
+          }
+          
+          .form-bg{
+            background-image: url('/assets/rectaglelinear.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-attachment: fixed;
+          }
 
-.position-relative.overflow-hidden::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.45); /* dark overlay for contrast */
-  z-index: 1;
-}
+          .position-relative.overflow-hidden::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.45); /* dark overlay for contrast */
+            z-index: 1;
+          }
+          
           /* Hide dark overlay on mobile */
           .position-absolute.top-0.start-0.w-100.h-100 {
             display: none !important;
@@ -837,19 +874,46 @@ export default function InfoCard() {
             padding: 0 1rem !important;
           }
           
-          /* Mobile buttons - ONLY CHANGED THIS SECTION */
+          /* Mobile buttons */
           .d-flex.gap-3 {
             justify-content: center !important;
             width: 100% !important;
             margin-bottom: 2rem !important;
           }
+
+          /* Mobile rectangle positioning - exactly like in the image */
+          .rect-1 {
+            top: 0%;
+            left: -3%;
+            width: 27vw;
+            height: 7vh;
+            opacity: 1;
+          }
+
+          .rect-2 {
+            top: 1.7%;
+            right: -3%;
+            width: 35vw;
+            height: 7vh;
+            opacity: 1;
+          }
+
+          .rect-3 {
+            bottom: 9%;
+            right: -3%;
+            width: 25vw;
+            height: 7vh;
+            opacity: 1;
+          }
           
-          /* Keep all other mobile styles the same */
+          /* Mobile form styling */
           .form-container {
             background: transparent !important;
             opacity: 1 !important;
             backdrop-filter: none !important;
-            padding:16px!important;
+            padding: 2rem !important;
+            padding-top: 4rem !important;
+            z-index: 10;
           }
           
           .form-container h2 {
@@ -870,26 +934,26 @@ export default function InfoCard() {
             borderRadius: 12px !important;
             padding: 12px !important;
           }
-          
-          .form-container .btn {
+         .form-container .btn {
             fontSize: 0.85rem !important;
             padding: 12px 24px !important;
             maxWidth: none !important;
             width: auto !important;
             borderRadius: 12px !important;
-            margin: 0 auto !important;
             display: flex !important;
-            justifyContent: center !important;
+  justify-content: flex-start !important;
           }
         }
-                   @media (min-width: 992px) {
-    .form-container {
-      margin: 0 15px; /* Equal left and right margin */
-      padding: 1.5rem !important; /* Equal padding all around */
-    }
-    .form-bg {
-      padding: 0 !important;
-    }
+
+        @media (min-width: 992px) {
+          .form-container {
+            padding: 1.3rem !important;
+            margin: 0 15px !important;
+          }
+          .form-bg {
+            padding: 0 !important;
+          }
+        }
       `}</style>
     </div>
   );
