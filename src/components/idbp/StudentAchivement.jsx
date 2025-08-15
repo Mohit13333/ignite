@@ -778,7 +778,7 @@ export default function StudentAchievements() {
                       right: "0px",
                       width: "100px",
                       height: "65px",
-                      fontSize: "2.5rem",
+                      fontSize: "2rem",
                       fontWeight: "800",
                       paddingLeft: "8px",
                       paddingRight: "8px",
