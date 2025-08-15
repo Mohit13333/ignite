@@ -351,69 +351,29 @@ import React from "react";
 
 export default function SubjectsCard() {
   return (
-    <div className="subjectSection fade-in-section" 
-      data-scroll 
-      data-scroll-class="is-inview" 
+    <div className="subjectSection fade-in-section"
+      data-scroll
+      data-scroll-class="is-inview"
       data-scroll-repeat
       style={{ animationDelay: "0.1s" }}
     >
       <div className="subjectSectionInner">
         {/* Background decorative rectangles */}
-        <div className="bgRect fade-in-section" 
-          data-scroll 
-          data-scroll-class="is-inview" 
-          data-scroll-repeat
-          style={{
-            background: 'rgba(255,255,255,0.1)',
-            position: 'absolute',
-            width: '350px',
-            height: '70px',
-            top: '10%',
-            left: '0',
-            borderRadius: '0 20px 20px 0',
-            animationDelay: '0.15s'
-          }}></div>
-        <div className="bgRect fade-in-section" 
-          data-scroll 
-          data-scroll-class="is-inview" 
-          data-scroll-repeat
-          style={{
-            background: 'rgba(255,255,255,0.1)',
-            position: 'absolute',
-            width: 'auto',
-            height: '70px',
-            top: '25%',
-            left: '20px',
-            borderRadius: '0 20px 20px 0',
-            animationDelay: '0.2s'
-          }}></div>
-        <div className="bgRect fade-in-section" 
-          data-scroll 
-          data-scroll-class="is-inview" 
-          data-scroll-repeat
-          style={{
-            background: 'rgba(255,255,255,0.1)',
-            position: 'absolute',
-            width: '150px',
-            height: '70px',
-            bottom: '15%',
-            left: '20px',
-            borderRadius: '0 20px 20px 0',
-            animationDelay: '0.25s'
-          }}></div>
-
+        <img src="/assets/Rectangle140.png" alt="bg-shape" className="testimonialRect rect-1" />
+        <img src="/assets/Rectangle140.png" alt="bg-shape" className="testimonialRect rect-2" />
+        <img src="/assets/Rectangle141.png" alt="bg-shape" className="testimonialRect rect-3" />
         {/* LEFT COLUMN */}
         <div className="subjectLeft fade-in-section"
-          data-scroll 
-          data-scroll-class="is-inview" 
+          data-scroll
+          data-scroll-class="is-inview"
           data-scroll-repeat
           style={{ animationDelay: '0.3s' }}
         >
           {/* Header */}
-          <span 
+          <span
             className="fade-in-section"
-            data-scroll 
-            data-scroll-class="is-inview" 
+            data-scroll
+            data-scroll-class="is-inview"
             data-scroll-repeat
             style={{
               fontSize: "1.3vw",
@@ -436,15 +396,15 @@ export default function SubjectsCard() {
 
           {/* Heading */}
           <h2 className="subjectTitle fade-in-section"
-            data-scroll 
-            data-scroll-class="is-inview" 
+            data-scroll
+            data-scroll-class="is-inview"
             data-scroll-repeat
             style={{ animationDelay: '0.4s' }}
           >
             LOREM IPSUM DOLOR SIT AMET, <br />
             <span className="subjectHighlight fade-in-section"
-              data-scroll 
-              data-scroll-class="is-inview" 
+              data-scroll
+              data-scroll-class="is-inview"
               data-scroll-repeat
               style={{ animationDelay: '0.45s' }}
             >
@@ -455,15 +415,15 @@ export default function SubjectsCard() {
 
         {/* RIGHT COLUMN */}
         <div className="subjectRight fade-in-section"
-          data-scroll 
-          data-scroll-class="is-inview" 
+          data-scroll
+          data-scroll-class="is-inview"
           data-scroll-repeat
           style={{ animationDelay: '0.5s' }}
         >
           <div className="subjectBubblesGrid">
             <div className="subjectBubbleRow fade-in-section"
-              data-scroll 
-              data-scroll-class="is-inview" 
+              data-scroll
+              data-scroll-class="is-inview"
               data-scroll-repeat
               style={{ animationDelay: '0.55s' }}
             >
@@ -472,8 +432,8 @@ export default function SubjectsCard() {
               </div>
             </div>
             <div className="subjectBubbleRow fade-in-section"
-              data-scroll 
-              data-scroll-class="is-inview" 
+              data-scroll
+              data-scroll-class="is-inview"
               data-scroll-repeat
               style={{ animationDelay: '0.6s' }}
             >
@@ -482,12 +442,12 @@ export default function SubjectsCard() {
               </div>
             </div>
             <div className="subjectBubbleRow fade-in-section"
-              data-scroll 
-              data-scroll-class="is-inview" 
+              data-scroll
+              data-scroll-class="is-inview"
               data-scroll-repeat
               style={{ animationDelay: '0.65s' }}
             >
-              <div 
+              <div
                 className="subjectBubble"
                 style={{
                   background: "linear-gradient(90deg, #d0e8ff, #a8cfff)",
@@ -502,8 +462,8 @@ export default function SubjectsCard() {
               </div>
             </div>
             <div className="subjectBubbleRow fade-in-section"
-              data-scroll 
-              data-scroll-class="is-inview" 
+              data-scroll
+              data-scroll-class="is-inview"
               data-scroll-repeat
               style={{ animationDelay: '0.7s' }}
             >
@@ -512,8 +472,8 @@ export default function SubjectsCard() {
               </div>
             </div>
             <div className="subjectBubbleRow fade-in-section"
-              data-scroll 
-              data-scroll-class="is-inview" 
+              data-scroll
+              data-scroll-class="is-inview"
               data-scroll-repeat
               style={{ animationDelay: '0.75s' }}
             >
@@ -617,6 +577,33 @@ export default function SubjectsCard() {
           justify-content: flex-start;
           position: relative;
           z-index: 1;
+        }
+
+           .testimonialRect {
+          position: absolute;
+          opacity: 1;
+          pointer-events: none;
+          z-index: 2;
+        }
+        .rect-1 {
+          top: 3%;
+          left: -8%;
+          width: 30vw;
+          height: 10vh;
+        }
+
+        .rect-2 {
+          top: 82%;
+          left: -5%;
+          width: 16vw;
+          height: 10vh;
+        }
+
+        .rect-3 {
+          bottom: 20%;
+          right: -9%;
+          width: 13vw;
+          height: 10vh;
         }
 
         .subjectBubblesGrid {
@@ -767,6 +754,23 @@ export default function SubjectsCard() {
             padding: 5px 15px 10px 15px !important;
             font-size: 16px !important;
           }
+               .rect-1 {
+          top: 3%;
+          left: -8%;
+          width: 30vw;
+          height: 7vh;
+        }
+.rect-2 {
+  display: none;
+}
+
+
+        .rect-3 {
+          bottom: 3%;
+          right: -9%;
+          width: 31vw;
+          height: 7vh;
+        }
         }
 
         @media (max-width: 575px) {
