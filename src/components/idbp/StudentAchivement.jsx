@@ -609,7 +609,6 @@ export default function StudentAchievements() {
               data-scroll-class="is-inview"
               data-scroll-repeat
               style={{
-                letterSpacing: "3px",
                 background: "linear-gradient(135deg, #3F88BA, #161664)",
                 WebkitBackgroundClip: "text",
                 WebkitTextFillColor: "transparent",
